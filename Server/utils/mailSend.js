@@ -1,36 +1,40 @@
-const nodemailer = require("nodemailer");
+const { BrevoClient } = require('@getbrevo/brevo')
 require("dotenv").config()
+
+const brevo = new BrevoClient({
+    apiKey : process.env.BREVO_API_KEY,
+})
 
 
 const mailSend = async (email,title,body) => {
 
     try {
 
-         const transport = nodemailer.createTransport({
-    
-           host: "smtp.gmail.com",
-            port: 587,
-            secure: false,
-             family: 4,
-            auth:{
-                user: process.env.MAIL_USER,
-                pass: process.env.MAIL_PASS,
-        } 
-    }) 
+        const result = await brevo.transactionalEmails.sendTransacEmail({
+        sender:{
+            name: "StudyNotion",
+            email:process.env.BREVO_SENDER_EMAIL 
+        },
+        to:[
+            {
+                email:email,
+            }
+        ],
+        subject:title,
+        htmlContent:body
 
-    let info  = await transport.sendMail({
-        from:'STUDYNOTION',
-        to:`${email}`,
-        subject:`${title}`,
-        html:`${body}`
     })
+
+         console.log("Email sent successfully:", result.messageId);
+
+    return result;
+        
+
      
-    console.log("Email sent successfully:", info.messageId);
-    return info;
         
     } catch (error) {
-        console.log("Mail sending error:", error);
-         throw error;
+        console.log("Brevo email error:", error);
+        throw error;
     }
     
 }
