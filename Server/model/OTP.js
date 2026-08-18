@@ -43,7 +43,7 @@ OTPSchema.pre("save", async function () {
 	if (this.isNew) {
 		await sendVerificationEmail(this.email, this.otp);
 	}
-	next();
+	
 });
 
 
