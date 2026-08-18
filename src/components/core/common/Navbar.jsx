@@ -55,7 +55,7 @@ const Navbar = () => {
     <div className='flex w-11/12 h-14 border-b border-richblack-700 items-center justify-between'>
       <div>
       <Link to={'/'}>
-         <img src={logo} width='160px'  height = '10px' ></img>
+         <img src={logo} width='160px'  height = '10px' alt='logo'  ></img>
       </Link>
       </div>
 
@@ -113,7 +113,7 @@ const Navbar = () => {
 
       <div className='flex space-x-3'>
        
-        {user && user?.accountType != "Instructor" && (
+        {user && user?.accountType !== "Instructor" && (
           <Link to={'/dashboard/cart'} className='relative'>
           <PiShoppingCartSimpleBold className='text-white mt-2'/>
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { GoNorthStar } from "react-icons/go";
-import HighlightText from '../Homepage/HighlightText';
-import CTAButton from '../Homepage/CTAButton';
+//import HighlightText from '../Homepage/HighlightText';
+//import CTAButton from '../Homepage/CTAButton';
 import { useState } from "react";
 import { AiOutlineEye , AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';

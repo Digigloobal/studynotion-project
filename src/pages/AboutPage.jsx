@@ -25,9 +25,9 @@ const AboutPage = () => {
             <div className='text-4xl w-[60%] text-center font-bold '>Driving Innovation in Online Education for a <HighlightText text={"Brighter Future"} /></div>
             <p className='w-[54%] text-center text-richblack-400'>Studynotion is at the forefront of driving innovation in online education. We're passionate about creating a brighter future by offering cutting-edge courses, leveraging emerging technologies, and nurturing a vibrant learning community.</p>
             <div className='flex gap-5 justify-between absolute translate-y-[100%]'>
-            <img src={bannerimage1} ></img>
-             <img src={bannerimage2}></img>
-              <img src={bannerimage3}></img>
+            <img src={bannerimage1} alt='bannerImage1' ></img>
+             <img src={bannerimage2} alt='bannerImage2'  ></img>
+              <img src={bannerimage3} alt='bannerImage3' ></img>
 
             </div>
         </section>
@@ -51,7 +51,7 @@ const AboutPage = () => {
 
             </div>
              <div className='w-[40%]'>
-             <img src={foundingImage}></img>
+             <img src={foundingImage} alt='foundingImage'></img>
                 
             </div>
                 

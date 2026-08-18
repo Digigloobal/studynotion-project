@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 import IconBtn from '../common/IconBtn';
 import { FiExternalLink } from "react-icons/fi";

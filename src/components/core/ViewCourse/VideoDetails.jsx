@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { markLectureAsComplete } from '../../../services/operations/courseDetailsAPI';
-import { setCompletedLectures, updateCompletedLectures } from '../../../slices/viewCourseSlice';
+import { updateCompletedLectures } from '../../../slices/viewCourseSlice';
 import { Player } from 'video-react';
 import '../../../../node_modules/video-react/dist/video-react.css'
-import { BsPlayBtn } from "react-icons/bs";
+//import { BsPlayBtn } from "react-icons/bs";
 import IconBtn from '../common/IconBtn';
 
 const VideoDetails = () => {

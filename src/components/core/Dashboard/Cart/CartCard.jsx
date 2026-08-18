@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import ReactStars from "react-rating-stars-component";
-import {GiNinjaStar} from "react-icons/gi"
+//import ReactStars from "react-rating-stars-component";
+//import {GiNinjaStar} from "react-icons/gi"
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { removeToCart } from '../../../../slices/cartSlice';
 import RatingStars from '../../common/RatingStars';
@@ -25,7 +25,7 @@ const CartCard = () => {
          <div className='flex  justify-around  w-[100%]  ' >
 
          <div className='flex gap-5 items-center'>
-            <img src={course?.thumbnail} className='w-[200px]' />
+            <img src={course?.thumbnail} className='w-[200px]' alt='course thumbnail' />
              <div>
             <p className='text-xl' >{course?.name}</p>
             <p>{course?.category?.name}</p>

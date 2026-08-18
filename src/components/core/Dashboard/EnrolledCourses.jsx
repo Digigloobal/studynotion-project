@@ -52,7 +52,9 @@ const navigate = useNavigate();
                >
               <div className='flex gap-2 ' >
                 <img src={course.thumbnail}
-                className='w-[80px] rounded-lg' />
+                className='w-[80px] rounded-lg'
+                alt='course thumbnail'
+                 />
                 <div>
                   <div>{course.courseName}</div>
                   <div className='text-richblack-600' >{ course.courseDescription.length > 10 ? (course.courseDescription.split(" ").slice(0,10).join(" ")+ "..." ): (course.courseDescription)}</div>

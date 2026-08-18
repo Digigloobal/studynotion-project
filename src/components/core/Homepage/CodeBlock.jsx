@@ -1,6 +1,6 @@
 import React from 'react'
 import CTAButton from './CTAButton'
-import { FaArrowRightLong } from "react-icons/fa6";
+//import { FaArrowRightLong } from "react-icons/fa6";
 import { TypeAnimation } from 'react-type-animation';
 const CodeBlock = ({heading, subHeading,ctabutton1Text ,ctabutton2Text, codeblock , index = false ,backgroundGradient,shadow}) => {
   return (

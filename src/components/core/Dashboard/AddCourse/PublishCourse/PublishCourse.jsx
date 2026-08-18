@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import IconBtn from '../../../common/IconBtn';
+//import IconBtn from '../../../common/IconBtn';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetCourseState, setStep } from '../../../../../slices/courseSlice';
 import { COURSE_STATUS } from '../../../../../utils/constants';
@@ -12,7 +12,7 @@ const PublishCourse = () => {
  
    const {
     register,
-    setValue,
+   // setValue,
     getValues,
     handleSubmit,
     formState:{errors}
@@ -81,9 +81,9 @@ const PublishCourse = () => {
             className=' border-gray-300 h-4 w-4 rounded bg-richblack-500 text-richblack-400 focus:ring-2 focus:ring-richblack-5 '
 
             />
-            {/* {errors.public && <span>
+            {errors.public && <span>
               plz check the box to Publish
-            </span>} */}
+            </span>}
 
             <span className='text-lg' >Make this Course Public</span>
           </label>

@@ -108,6 +108,7 @@ console.log("instructorData => " , instructorData);
                 <img
                     src={course.thumbnail}
                     className='w-[360px] rounded-lg object-cover '
+                    alt='course thumbnail'
                 />
 
                 <div>

@@ -4,7 +4,7 @@ import CountryCode from "../../../data/countrycode.json"
 
 const ContactUsForm = () => {
   
-    const [loading , setLoading] = useState(false);
+    //const [loading , setLoading] = useState(false);
     const {
         register,
         handleSubmit,

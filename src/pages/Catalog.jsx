@@ -37,7 +37,7 @@ const Catalog = () => {
 
     useEffect(()=>{
 
-        const result = [];
+       
 
         const getCategoryDetails = async () => {
              

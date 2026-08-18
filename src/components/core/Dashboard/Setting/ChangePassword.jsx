@@ -17,7 +17,7 @@ const ChangePassword = () => {
        const {
                 register,
                 handleSubmit,
-                reset,
+                //reset,
                 formState:{errors}
         
             } = useForm();

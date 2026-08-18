@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Spinner from '../common/Spinner';
+//import Spinner from '../common/Spinner';
 import { GoNorthStar } from 'react-icons/go';
 import { resetPassword } from '../../../services/operations/authAPI';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -40,7 +40,7 @@ const UpdatePassword = () => {
       function submitHandler(e){
         e.preventDefault();
       
-         if(password != confirmPassword){
+         if(password !== confirmPassword){
             toast.error("Password don't match plz try again")
             setFormData({
                 password:"",

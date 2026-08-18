@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { sidebarLinks } from '../../../data/dashboard-links'
 import SidebarLink from './SidebarLink'
 import { useDispatch, useSelector } from 'react-redux'
 import { VscSignOut } from "react-icons/vsc";
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../../../services/operations/authAPI';
-import ConfirmationModel from '../common/ConfirmationModel';
+//import ConfirmationModel from '../common/ConfirmationModel';
 
 
 const Sidebar = ({setConfirmationModal}) => {

@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css"
 import "swiper/css/free-mode"
 import "swiper/css/pagination"
-import { Autoplay,FreeMode,Navigation, Pagination } from 'swiper/modules'
+import { Autoplay,Navigation, Pagination } from 'swiper/modules'
 import RatingStars from './RatingStars';
 
 const ReviewSlider = () => {
@@ -70,6 +70,7 @@ const ReviewSlider = () => {
                             (`https://api.dicebear.com/5.x/initials/svg?seed=${review?.user?.firstName} ${review?.user?.lastName}`)}
 
                             className='w-[40px] h-[40px] object-cover rounded-full '
+                            alt='user image'
 
                         />
                         <div>

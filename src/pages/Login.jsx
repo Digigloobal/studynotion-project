@@ -1,6 +1,6 @@
 import React from 'react'
 import loginImg from '../assets/Images/login.webp'
-import frame from '../assets/Images/frame.png'
+//import frame from '../assets/Images/frame.png'
 import FormTemplate from '../components/core/common/FormTemplate'
 import HighlightText from '../components/core/Homepage/HighlightText'
 

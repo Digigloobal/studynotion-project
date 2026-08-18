@@ -6,7 +6,7 @@ import CTAButton from '../components/core/Homepage/CTAButton';
 import Banner from '../assets/Images/banner.mp4'
 import CodeBlock from '../components/core/Homepage/CodeBlock';
 import UnlockCards from '../components/core/Homepage/UnlockCards';
-import BgHome from '../assets/Images/bghome.svg'
+//import BgHome from '../assets/Images/bghome.svg'
 import TimelineSection from '../components/core/Homepage/TimelineSection';
 import LearnMoreSection from '../components/core/Homepage/LearnMoreSection';
 import InstructorSection from '../components/core/Homepage/InstructorSection';

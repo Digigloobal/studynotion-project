@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { apiConnector } from '../../../services/apiConnector';
+//import { apiConnector } from '../../../services/apiConnector';
 import { fetchCourseDetails } from '../../../services/operations/courseDetailsAPI';
 import GetAvgRating from '../../../utils/avgRating';
 import RatingStars from '../common/RatingStars';
@@ -10,7 +10,7 @@ import { HiOutlineClock } from "react-icons/hi2";
 import { FaArrowPointer } from "react-icons/fa6";
 import { FaMobileRetro } from "react-icons/fa6";
 import { GrCertificate } from "react-icons/gr";
-import { RxDropdownMenu } from 'react-icons/rx';
+//import { RxDropdownMenu } from 'react-icons/rx';
 import { FaAngleUp } from "react-icons/fa6";
 import { FaLaptopCode } from "react-icons/fa";
 import Footer from '../common/Footer';
@@ -83,7 +83,7 @@ const CourseDetailsPage = () => {
         setIsActive(
             !isActive.includes(id)
                 ? isActive.concat(id)
-                : isActive.filter((e) => e != id)
+                : isActive.filter((e) => e !== id)
 
         )
     }
@@ -155,10 +155,11 @@ const CourseDetailsPage = () => {
                 <img
                 src={courseData?.courseDetails?.thumbnail}
                 className='h-[150px] object-cover rounded-t-lg'
+                alt='course thumbnail '
                 /></div>
                 <div className='bg-richblack-700 p-3 flex flex-col  gap-2 rounded-b-lg'>
                     <p className='text-2xl text-richblack-5 font-semibold ' >Rs. {courseData?.courseDetails?.price}</p>
-                    {  !user || !courseData?.courseDetails?.studentsEnrolled.includes(user._id) &&
+                    { ( !user || !courseData?.courseDetails?.studentsEnrolled.includes(user._id) ) &&
                      <button className='bg-yellow-50 p-2 text-richblack-900 text-sm rounded-lg'
                      onClick={ handleAddToCart}
                      >Add to Cart</button>
@@ -273,7 +274,9 @@ const CourseDetailsPage = () => {
                 <div className='flex gap-2 items-center' >
                 <div className='w-[100px] h-[100px] rounded-full mt-3' >
                     <img src={courseData?.courseDetails?.instructor?.image}
-                    className='object-fill rounded-full w-[100px] h-[100px]' />
+                    className='object-fill rounded-full w-[100px] h-[100px]'
+                    alt='instructor image'
+                     />
                  </div>
                     <p>{courseData?.courseDetails?.instructor?.firstName} {courseData?.courseDetails?.instructor?.lastName}</p>
 

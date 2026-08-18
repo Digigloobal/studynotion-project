@@ -59,6 +59,7 @@ const ReviewModal = ({setReviewModal}) => {
         <img
             src={user?.image}
             className='w-10 rounded-md '
+            alt='user image'
         />
         <div >
             <p className='text-sm'>{user?.firstName} {user?.lastName}</p>

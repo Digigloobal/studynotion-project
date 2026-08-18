@@ -12,11 +12,11 @@ const LearnMoreSection = () => {
       <div className='w-[55%] mt-2 text-center'>Using spin making learning multiple languages easy. with 20+ languages realistic voice-over, progress tracking, custom schedule and more.</div>
       <div className=' flex lg:flex-row flex-col'>
 
-       <img src={Know_your_progress} className='lg:translate-x-12 translate-x-0 mt-12 '></img>
+       <img src={Know_your_progress} className='lg:translate-x-12 translate-x-0 mt-12 ' alt='know your progress'></img>
 
-      <img src={Compare_with_Other} className='lg:-translate-x-20 lg:translate-y-0 translate-x-0 -translate-y-20'></img>
+      <img src={Compare_with_Other} className='lg:-translate-x-20 lg:translate-y-0 translate-x-0 -translate-y-20' alt='compare with others'></img>
      
-      <img src={Plan_your_lessons} className='lg:-translate-x-56  lg:translate-y-0 translate-x-0 -translate-y-44 -mb-36 lg:-mb-0' ></img>
+      <img src={Plan_your_lessons} className='lg:-translate-x-56  lg:translate-y-0 translate-x-0 -translate-y-44 -mb-36 lg:-mb-0' alt='plan your lesson' ></img>
 
 
 

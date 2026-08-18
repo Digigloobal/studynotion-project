@@ -2,8 +2,8 @@ import React from 'react'
 import frame from '../../../assets/Images/frame.png'
 import LoginForm from '../form/LoginForm'
 import SignupForm from '../form/SignupForm'
-import HighlightText from '../Homepage/HighlightText'
-import { useState } from 'react'
+//import HighlightText from '../Homepage/HighlightText'
+//import { useState } from 'react'
 
 
 const FormTemplate = ({ formType ,imgType ,heading ,subHeading}) => {
@@ -45,8 +45,8 @@ const FormTemplate = ({ formType ,imgType ,heading ,subHeading}) => {
 
         <div className='relative lg:w-[40%] mt-20'>
             
-            <img src={frame} className='absolute inset-0 left-[5%] top-[5%]'></img>
-            <img src={imgType} className='relative'></img>
+            <img src={frame} className='absolute inset-0 left-[5%] top-[5%]' alt='frame'></img>
+            <img src={imgType} className='relative' alt='imgtype'></img>
         </div>
       </div>
     </div>

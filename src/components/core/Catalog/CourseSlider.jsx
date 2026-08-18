@@ -1,10 +1,10 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Course_Card from './Course_Card'
 import "swiper/css"
 import "swiper/css/free-mode"
 import "swiper/css/pagination"
-import { Autoplay,FreeMode,Navigation, Pagination } from 'swiper/modules'
+import { Autoplay,Navigation, Pagination } from 'swiper/modules'
 
 
 

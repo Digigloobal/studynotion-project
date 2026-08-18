@@ -18,7 +18,7 @@ const EditProfile = () => {
     const {
             register,
             handleSubmit,
-            reset,
+            //reset,
             formState:{errors}
     
         } = useForm({defaultValues:{dropDown:"+91"}})

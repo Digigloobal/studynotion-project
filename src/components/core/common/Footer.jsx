@@ -14,7 +14,7 @@ const Footer = () => {
        <div className='flex gap-5 mt-16 lg:border-r border-richblack-400 justify-evenly items-start w-[50%]'>
        
        <div className='flex flex-col gap-2'>
-        <img src={StudyNotionLightLogo}></img>
+        <img src={StudyNotionLightLogo} alt='studynotion logo'></img>
         <div className='text-richblack-100 text-[16px]'>Company</div>
         <Link to={"/about"} className='text-richblack-400 text-sm hover:text-richblack-600'>About</Link>
         <Link className='text-richblack-400 text-sm hover:text-richblack-600'>Careers</Link>

@@ -1,13 +1,15 @@
 import {toast} from 'react-hot-toast';
 
-import { setLoading , setJwtToken } from '../../slices/authSlice';
-import { setUser } from '../../slices/profileSlice';
+//import { setLoading , setJwtToken } from '../../slices/authSlice';
+//import { setUser } from '../../slices/profileSlice';
 import { apiConnector } from '../apiConnector';
 import { profileEndpoints } from '../apis'
 
 
 const {
-    GET_USER_DETAILS_API,GET_USER_ENROLLED_COURSES_API,GET_INSTRUCTOR_DATA_API
+   // GET_USER_DETAILS_API,
+    GET_USER_ENROLLED_COURSES_API,
+    GET_INSTRUCTOR_DATA_API
 } = profileEndpoints
 
 

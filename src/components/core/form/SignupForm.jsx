@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { GoNorthStar } from 'react-icons/go'
-import { Form, useNavigate } from 'react-router-dom'
-import CTAButton from '../Homepage/CTAButton'
+import { useNavigate } from 'react-router-dom'
+//import CTAButton from '../Homepage/CTAButton'
 import { AiOutlineEye , AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
-import { sendOtp, signUp } from '../../../services/operations/authAPI';
+import { sendOtp } from '../../../services/operations/authAPI';
 import { setSignupData } from '../../../slices/authSlice';
 import toast from 'react-hot-toast';
 
