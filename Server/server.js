@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(
 	cors({
 		origin:["http://localhost:3000", 
-				"https://studynotion-project-puce.vercel.app/"]
+				"https://studynotion-project-puce.vercel.app/"],
 		credentials:true,
 	}));
 
