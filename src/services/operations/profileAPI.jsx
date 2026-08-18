@@ -1,0 +1,75 @@
+import {toast} from 'react-hot-toast';
+
+import { setLoading , setJwtToken } from '../../slices/authSlice';
+import { setUser } from '../../slices/profileSlice';
+import { apiConnector } from '../apiConnector';
+import { profileEndpoints } from '../apis'
+
+
+const {
+    GET_USER_DETAILS_API,GET_USER_ENROLLED_COURSES_API,GET_INSTRUCTOR_DATA_API
+} = profileEndpoints
+
+
+export async function getUserEnrolledCourses(jwtToken){
+   
+
+        const toastId = toast.loading("...Loading")
+        let result = []
+
+        try {
+
+            // console.log("fronted start")
+           
+            const response = await apiConnector("GET",GET_USER_ENROLLED_COURSES_API,null,{
+              Authorization: `Bearer ${jwtToken}`  
+            })
+
+            // console.log("After start")
+
+               console.log(
+                "GET_USER_ENROLLED_COURSES_API API RESPONSE............",
+                response
+            )
+
+            if (!response.data.success) {
+                throw new Error(response.data.message)
+            }
+            
+            result = response.data.data
+            //console.log("result=>",result);
+
+
+        } catch (error) {
+             console.log("GET_USER_ENROLLED_COURSES_API API ERROR............", error)
+           toast.error("Could Not Get Enrolled Courses")
+        }
+        
+        toast.dismiss(toastId);
+         return result;
+        
+}
+
+export async function getInstructorData(jwtToken){
+    const toastId = toast.loading("Loading...");
+    let result = [];
+
+    try {
+        const response = await apiConnector("GET", GET_INSTRUCTOR_DATA_API, null, {
+            Authorization: `Bearer ${jwtToken}`
+        })
+
+        console.log("GET_INSTRUCTOR_API_RESPONSE", response);
+        result = response?.data?.courses
+
+    } catch (error) {
+
+        console.log("GET_INSTRUCTOR_API ERROR", error);
+        toast.error("Could not Get Instructor Data")
+
+    }
+
+    toast.dismiss(toastId);
+
+    return result;
+}
