@@ -8,9 +8,9 @@ const mailSend = async (email,title,body) => {
 
          const transport = nodemailer.createTransport({
     
-           host: process.env.MAIL_HOST,
-            port: 465,
-            secure: true,
+           host: "smtp.gmail.com",
+            port: 587,
+            secure: false,
             auth:{
                 user: process.env.MAIL_USER,
                 pass: process.env.MAIL_PASS,
@@ -24,11 +24,12 @@ const mailSend = async (email,title,body) => {
         html:`${body}`
     })
      
-    console.log(info);
+    console.log("Email sent successfully:", info.messageId);
     return info;
         
     } catch (error) {
-        console.log(error);
+        console.log("Mail sending error:", error);
+         throw error;
     }
     
 }
