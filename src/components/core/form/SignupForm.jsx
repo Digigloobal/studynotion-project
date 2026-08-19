@@ -42,7 +42,9 @@ const [showConfirmPassword , setShowConfirmPassword] = useState(false);
     setFormData((prevData) => ({
        
        ...prevData,
-        [event.target.name] : event.target.value,
+        [event.target.name] : event.target.name === "email"
+                ? event.target.value.toLowerCase()
+                : event.target.value,
     }))
    }
 
