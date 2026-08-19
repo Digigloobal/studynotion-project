@@ -84,7 +84,7 @@ export function signUp(
         const response = await apiConnector("POST" , SIGNUP_API,{
             firstName , 
             lastName,
-            email,
+            email : email,
             password,
             confirmPassword,
             contactNumber,           
