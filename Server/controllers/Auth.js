@@ -112,12 +112,12 @@ exports.signUp = async (req,res) => {
         })
     }
 
-    console.log("accountType",accountType);
+    console.log("accountType =>",accountType);
 
      
 
     const recentOtp = await OTP.find({email:email} ).sort({createdAt:-1}).limit(1);
-    console.log(recentOtp);
+    console.log("recentOtp => ",recentOtp);
 
     if(recentOtp.length === 0){
        return res.status(404).json({
