@@ -44,11 +44,11 @@ export const sidebarLinks = [
   },
 
 
-  {
-    id: 7,
-    name: "Purchase History",
-    path: "/dashboard/purchase-history",
-    type: ACCOUNT_TYPE.STUDENT,
-    icon: "VscHistory",
-  },
+  // {
+  //   id: 7,
+  //   name: "Purchase History",
+  //   path: "/dashboard/purchase-history",
+  //   type: ACCOUNT_TYPE.STUDENT,
+  //   icon: "VscHistory",
+  // },
 ];
