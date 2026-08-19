@@ -82,7 +82,7 @@ exports.signUp = async (req,res) => {
         otp
     } = req.body;
 
-  
+  console.log("email =>" , email);
 
     if(!firstName || !lastName || !email || !password || !confirmPassword || !otp){
        return res.status(403).json({
@@ -124,6 +124,7 @@ exports.signUp = async (req,res) => {
         success:false,
         message:"OTP not Found"
        })
+		
     }else if(otp!== recentOtp[0].otp){
         return res.status(401).json({
             success:false,
