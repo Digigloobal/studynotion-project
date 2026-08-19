@@ -167,10 +167,10 @@ const CourseDetailsPage = () => {
                    
                      <button className='bg-richblack-900 p-2 text-richblack-100 text-sm rounded-lg' 
                       onClick={
-                                user || courseData?.courseDetails?.studentsEnrolled.includes(user._id) ? () => navigate("/dashboard/enrolled-courses") :
+                                user && courseData?.courseDetails?.studentsEnrolled.includes(user._id) ? () => navigate("/dashboard/enrolled-courses") :
                         handleBuyCourse}
                      >
-                      {user || courseData?.courseDetails?.studentsEnrolled.includes(user._id) ? "Go To Course " : "Buy Now "} 
+                      { user && courseData?.courseDetails?.studentsEnrolled.includes(user._id) ? "Go To Course " : "Buy Now "} 
                      </button>
                      <p className='text-[12px] text-richblack-25 mx-auto'>30-Day Money-Back Guarantee</p>
                      <div>
