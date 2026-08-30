@@ -16,8 +16,8 @@ const FormTemplate = ({ formType ,imgType ,heading ,subHeading}) => {
 
       <div  className='text-white w-full flex flex-col gap-3'>
        
-        <div className='text-3xl w-[70%]'>{heading}</div>
-      <div className='text-xl text-richblack-200 w-[70%]' >{subHeading}</div>
+        <div className='text-3xl lg:w-[70%] w-[100%]'>{heading}</div>
+      <div className='text-xl text-richblack-200 lg:w-[70%] w-[100%]' >{subHeading}</div>
       
 
       <div>
@@ -43,7 +43,7 @@ const FormTemplate = ({ formType ,imgType ,heading ,subHeading}) => {
     
       </div>
 
-        <div className='relative lg:w-[40%] mt-20'>
+        <div className='relative lg:w-[40%] w-[80%] mt-20'>
             
             <img src={frame} className='absolute inset-0 left-[5%] top-[5%]' alt='frame'></img>
             <img src={imgType} className='relative' alt='imgtype'></img>

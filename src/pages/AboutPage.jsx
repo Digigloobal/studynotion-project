@@ -20,12 +20,12 @@ const AboutPage = () => {
 
        <div className='flex flex-col justify-center items-center text-white gap-3 mx-auto  bg-richblack-800 '>
 
-        <section className='flex flex-col justify-center items-center mt-16 gap-5 w-11/12 relative mb-[270px]'>
+        <section className='flex flex-col justify-center items-center mt-16 gap-5 lg:w-11/12 w-full relative mb-[270px]'>
             <p className='text-richblack-200'>About us</p>
-            <div className='text-4xl w-[60%] text-center font-bold '>Driving Innovation in Online Education for a <HighlightText text={"Brighter Future"} /></div>
-            <p className='w-[54%] text-center text-richblack-400'>Studynotion is at the forefront of driving innovation in online education. We're passionate about creating a brighter future by offering cutting-edge courses, leveraging emerging technologies, and nurturing a vibrant learning community.</p>
-            <div className='flex gap-5 justify-between absolute translate-y-[100%]'>
-            <img src={bannerimage1} alt='bannerImage1' ></img>
+            <div className='lg:text-4xl text-2xl lg:w-[60%] w-[100%] text-center font-bold '>Driving Innovation in Online Education for a <HighlightText text={"Brighter Future"} /></div>
+            <p className='lg:w-[54%] w-[100%] text-center text-richblack-400'>Studynotion is at the forefront of driving innovation in online education. We're passionate about creating a brighter future by offering cutting-edge courses, leveraging emerging technologies, and nurturing a vibrant learning community.</p>
+            <div className='flex gap-5 w-full justify-between  absolute translate-y-[100%]'>
+            <img src={bannerimage1} alt='bannerImage1'  ></img>
              <img src={bannerimage2} alt='bannerImage2'  ></img>
               <img src={bannerimage3} alt='bannerImage3' ></img>
 
@@ -34,14 +34,14 @@ const AboutPage = () => {
 
        </div>
 
-       <section className='flex justify-center items-center mt-40 w-11/12 mx-auto'>
+       <section className='flex justify-center items-center mt-40 lg:w-11/12 w-full mx-auto'>
             <Quote/>
         </section>
 
         <section className='flex flex-col w-11/12  mt-14 mx-auto gap-10'>
-            <div className='flex  justify-evenly w-full'>
+            <div className='flex gap-4 lg:flex-row lg:justify-evenly flex-col-reverse  w-full'>
 
-            <div className='flex flex-col gap-4 text-white w-[29%] items-start '>
+            <div className='flex flex-col gap-4 text-white lg:w-[29%] w-full items-start '>
 
             <h2 className='text-3xl font-semibold text-pink-300' >Our Founding Story</h2>
             <p className='text-[14px] text-richblack-400 '>
@@ -50,20 +50,20 @@ const AboutPage = () => {
             <p className='text-[14px]  text-richblack-400'>As experienced educators ourselves, we witnessed firsthand the limitations and challenges of traditional education systems. We believed that education should not be confined to the walls of a classroom or restricted by geographical boundaries. We envisioned a platform that could bridge these gaps and empower individuals from all walks of life to unlock their full potential. </p>
 
             </div>
-             <div className='w-[40%]'>
+             <div className='lg:w-[40%] w-full'>
              <img src={foundingImage} alt='foundingImage'></img>
                 
             </div>
                 
             </div>
-            <div className='flex justify-evenly gap-16 mt-20 '>
-            <div className='flex flex-col gap-3 text-white w-[30%] items-start  -ml-[100px]'>
+            <div className='flex lg:flex-row flex-col lg:justify-evenly gap-16 mt-20 '>
+            <div className='flex flex-col gap-3 text-white lg:w-[30%] w-full items-start  lg:-ml-[100px]'>
                 <h2 className='text-3xl text-brown-100 font-bold'>Our Vision</h2>
                 <p className='text-richblack-400 text-[14px]'>With this vision in mind, we set out on a journey to create an e-learning platform that would revolutionize the way people learn. Our team of dedicated experts worked tirelessly to develop a robust and intuitive platform that combines cutting-edge technology with engaging content, fostering a dynamic and interactive learning experience.</p>
 
             </div>
 
-            <div className='flex flex-col gap-4 text-white w-[30%] items-start -ml-[150px]'>
+            <div className='flex flex-col gap-4 text-white lg:w-[30%] w-full items-start lg:-ml-[150px]'>
                 <h2 className='text-3xl font-bold '><HighlightText text={"Our Mission"} /></h2>
                 <p className='text-richblack-400 text-[14px]'>our mission goes beyond just delivering courses online. We wanted to create a vibrant community of learners, where individuals can connect, collaborate, and learn from one another. We believe that knowledge thrives in an environment of sharing and dialogue, and we foster this spirit of collaboration through forums, live sessions, and networking opportunities.</p>
             </div>
@@ -79,7 +79,7 @@ const AboutPage = () => {
             <LearningContent/>
         </section>
 
-        <section className='flex flex-col gap-5 w-4/12 mx-auto items-center justify-center mt-44 mb-12'>
+        <section className='flex flex-col gap-5 lg:w-4/12 w-full mx-auto items-center justify-center mt-44 mb-12'>
         <div className='text-white text-center flex flex-col gap-3'> 
             <h2 className='text-3xl'>Get In Touch</h2>
             <p className='text-richblack-400'> We’d love to here for you, Please fill out this form.</p>
@@ -87,10 +87,10 @@ const AboutPage = () => {
             <ContactUsForm/>
         </section>
 
-        <div className='lg:w-11/12 mt-16 gap-5 flex flex-col justify-center  ' >
+        {/* <div className='lg:w-11/12 mt-16 gap-5 flex flex-col justify-center  ' >
       <div className='text-richblack-5 text-center ml-16 text-3xl' >Reviews From Other Learners</div>
          <ReviewSlider/>
-      </div>
+      </div> */}
       
 
 

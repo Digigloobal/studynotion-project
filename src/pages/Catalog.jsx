@@ -102,10 +102,10 @@ const Catalog = () => {
 
            <div>
             <div className='text-2xl' >Frequently Bought Together</div>
-            <div className='grid grid-cols-2 mt-4 gap-4'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 mt-4 gap-4'>
               {catalogPageData?.data?.mostSellingCourses?.slice(0,4).
               map((course,index) => (
-                <Course_Card course = {course} key={index} Height={"h-[300px]"} />
+                <Course_Card course = {course} key={index} Height={"lg:h-[300px] h-[200px]"} />
               ))}
             </div>
            </div>

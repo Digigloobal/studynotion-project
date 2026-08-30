@@ -127,8 +127,8 @@ const CourseDetailsPage = () => {
         <div className='w-[100%]' >
 
         {courseData && (
-            <div className='w-[100%] bg-richblack-800 rounded-lg flex h-[280px]' >
-            <div className='flex flex-col w-[60%] gap-2 p-3 border-r-2 border-richblack-700 my-4 mb-5  ' >
+            <div className='w-[100%] bg-richblack-800 rounded-lg flex lg:flex-row flex-col lg:h-[280px] h-fit ' >
+            <div className='flex flex-col lg:w-[60%] w-[100%] gap-2 p-3 lg:border-r-2 border-richblack-700 my-4 mb-5  ' >
                 <p className='text-richblack-400 text-sm' >Home / Learning / <span className='text-yellow-5'> {courseData?.courseDetails?.category.name} </span> </p>
                  <p className='text-2xl' >{courseData?.courseDetails?.courseName}</p>
                  <p className='text-richblack-400 text-sm' >{courseData?.courseDetails?.courseDescription}</p>
@@ -150,11 +150,11 @@ const CourseDetailsPage = () => {
                  </div>
             </div>
 
-            <div className='flex flex-col p-6 mt-5 pl-14'>
+            <div className='flex flex-col p-6 mt-5 lg:pl-14 '>
                 <div >
                 <img
                 src={courseData?.courseDetails?.thumbnail}
-                className='h-[150px] object-cover rounded-t-lg'
+                className='lg:h-[150px] h-[180px] object-cover rounded-t-lg'
                 alt='course thumbnail '
                 /></div>
                 <div className='bg-richblack-700 p-3 flex flex-col  gap-2 rounded-b-lg'>
@@ -192,7 +192,7 @@ const CourseDetailsPage = () => {
 
         )}
 
-        <div className='flex flex-col  w-[60%] p-6 mt-5 h-[200px] border-2 border-richblack-800 gap-1 '>
+        <div className='flex flex-col  lg:w-[60%] w-[100%] p-6 mt-5 lg:h-[200px] h-[250px] border-2 border-richblack-800 gap-1 '>
 
         <p className='text-2xl'>What you'll learn</p>
         <p className='text-sm text-richblack-100'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
@@ -202,11 +202,11 @@ const CourseDetailsPage = () => {
 
         </div>
 
-        <div  className='flex flex-col  w-[60%] p-6 mt-5   gap-1'>
+        <div  className='flex flex-col  lg:w-[60%] w-[100%] p-6 mt-5   gap-1'>
         <div>
             <p className='text-2xl'>Course content</p>
             <div className='flex justify-between' >
-            <div className='flex gap-2 text-sm text-richblack-400'>
+            <div className='flex gap-2 lg:text-sm text-[10px] text-richblack-400 lg:mt-1 mt-2'>
                 <p>{courseData?.courseDetails?.courseContent.length} sections .</p>
                 {/* eska kuch function ya adjust krna pde ga  */}
                 <p>{totalNoOfLectures} lectures </p>
@@ -215,7 +215,7 @@ const CourseDetailsPage = () => {
             </div>
 
             <div>
-                <button className='text-sm text-yellow-50'
+                <button className='lg:text-sm text-[10px] text-yellow-50'
                  onClick={() => setIsActive([])}
                 > Collapse all Sections</button>
             </div>

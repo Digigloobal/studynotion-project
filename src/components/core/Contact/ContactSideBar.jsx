@@ -4,7 +4,8 @@ import { IoEarthSharp ,IoCall } from "react-icons/io5";
 
 const ContactSideBar = () => {
   return (
-    <div className='text-white flex flex-col gap-10 bg-richblack-800 p-8 rounded-md w-[120%] '>
+    <div className='text-white flex flex-col gap-10 bg-richblack-800 p-8 rounded-md lg:w-[120%] w-[100%]
+     '>
 
     <div className='flex gap-3'>
 
