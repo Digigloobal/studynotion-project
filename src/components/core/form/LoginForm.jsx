@@ -47,7 +47,7 @@ const [showPassword , setShowPassword] = useState(false);
 
         <form
       onSubmit={submitHandler}
-      className="flex flex-col gap-4 w-full max-w-md"
+      className="flex flex-col gap-4 lg:w-full w-[90%] max-w-md"
     >
       <div className="flex flex-col gap-2">
         <label htmlFor="email" className="text-richblack-100 flex gap-1">

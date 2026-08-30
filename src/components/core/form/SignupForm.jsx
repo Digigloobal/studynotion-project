@@ -92,9 +92,9 @@ const [showConfirmPassword , setShowConfirmPassword] = useState(false);
     <div className='w-full flex flex-col '>
       <form className='text-white flex flex-col w-full gap-3' onSubmit={submitHandler} >
 
-     <div className='flex gap-4 w-full'>
+     <div className='flex lg:flex-row flex-col gap-4 w-full'>
 
-     <div className='flex flex-col gap-2 w-[30%]'>
+     <div className='flex flex-col gap-2 lg:w-[30%] w-[80%] '>
        <label className='flex gap-1' htmlFor='firstName'>First Name <GoNorthStar className='text-pink-200 text-[10px] mt-1' />  
          
       </label>
@@ -110,7 +110,7 @@ const [showConfirmPassword , setShowConfirmPassword] = useState(false);
 
            />
      </div>
-     <div className='flex flex-col gap-2 w-[30%]'>
+     <div className='flex flex-col gap-2 lg:w-[30%] w-[80%]'>
       <label htmlFor='lastName' className='flex gap-1' >Last Name   
         
       </label>
@@ -129,7 +129,7 @@ const [showConfirmPassword , setShowConfirmPassword] = useState(false);
        
      </div>
 
-     <div className='flex flex-col gap-2 w-[62%]'>
+     <div className='flex flex-col gap-2 lg:w-[62%] w-[80%]'>
       <label htmlFor='email' className='flex gap-1' >Email Address <GoNorthStar  className='text-pink-200 text-[10px] mt-1' />
 
      </label>
@@ -145,7 +145,7 @@ const [showConfirmPassword , setShowConfirmPassword] = useState(false);
      />
      </div>
 
-     <div className='flex flex-col gap-2 w-[62%]' >
+     <div className='flex flex-col gap-2 lg:w-[62%] w-[80%]' >
       <label htmlFor='contactNumber' className='flex gap-1' >Phone Number <GoNorthStar  className='text-pink-200 text-[10px] mt-1' />
      
       
@@ -163,9 +163,9 @@ const [showConfirmPassword , setShowConfirmPassword] = useState(false);
      </div>
 
 
-     <div className='flex gap-4 w-full'>
+     <div className='flex lg:flex-row flex-col gap-4 w-full'>
 
-     <div className='flex flex-col gap-2 w-[30%] relative'>
+     <div className='flex flex-col gap-2 lg:w-[30%] w-[80%] relative'>
        <label htmlFor='password' className='flex gap-1'>Create Password <GoNorthStar  className='text-pink-200 text-[10px] mt-1' />
      
       
@@ -185,7 +185,7 @@ const [showConfirmPassword , setShowConfirmPassword] = useState(false);
       </div>
      
      </div>
-     <div className='flex flex-col gap-2 w-[30%] relative'>
+     <div className='flex flex-col gap-2 lg:w-[30%] w-[80%] relative'>
       <label htmlFor='confirmPassword' className='flex gap-1'>Confirm Password <GoNorthStar  className='text-pink-200 text-[10px] mt-1' />
       
       

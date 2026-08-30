@@ -17,7 +17,7 @@ import ReviewSlider from '../components/core/common/ReviewSlider';
 const Home = () => {
   return (
      <div>
-    <div className=' relative flex flex-col lg:justify-center lg:place-items-center max-w-sm lg:w-11/12 lg:items-center items-start lg:max-w-maxContent  text-white mx-auto'>
+    <div className=' relative flex flex-col lg:justify-center lg:place-items-center max-w-sm lg:w-11/12 lg:items-center items-start lg:max-w-maxContent  text-white mx-auto '>
       
      
       <Link to={"/signup"}>
@@ -153,13 +153,13 @@ const Home = () => {
       </div>
       </div> 
 
-      <div className=' flex w-11/12 flex-col justify-between max-w-maxContent items-center mx-auto '>
+      <div className=' flex lg:w-11/12 w-full flex-col justify-between max-w-maxContent items-center mx-auto '>
  
          <div className=' flex lg:flex-row  flex-col gap-7 mt-[95px] mb-10'>
       <div className='text-4xl lg:w-[45%] w-full'>
         Get the skills you need for a <HighlightText text={"job that is in demand."}/>
       </div>
-      <div className='flex flex-col items-start gap-10 lg:w-[40%] w-full '>
+      <div className='flex flex-col items-start gap-10 lg:w-[40%] w-full flex-wrap '>
         <p className='text-[16px]'>The modern StudyNotion is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.</p>
         <CTAButton text={"Learn More"} active={true} linkTo={"/signup"} shadow='false'/>
       </div>
@@ -187,9 +187,14 @@ const Home = () => {
 
       </div>
 
-      <div className='lg:w-11/12 mt-16 gap-5 flex flex-col justify-center  ' >
-      <div className='text-richblack-5 text-center text-3xl' >Reviews From Other Learners</div>
-         <ReviewSlider/>
+      <div className='lg:w-11/12 w-full mt-16 lg:flex hidden flex-col  gap-5  items-center ' >
+      <div className='text-richblack-5 text-center lg:text-3xl w-full text-xl ' >Reviews From Other Learners</div>
+     
+        <div className="w-full">
+        <ReviewSlider />
+    </div>
+
+        
       </div>
 
       <div className='w-screen bg-richblack-800'>

@@ -39,12 +39,12 @@ const ReviewSlider = () => {
 
   return (
    
-    <div className='text-white'>
+    <div className='text-white lg:w-11/12 w-full'>
 
-    <div  >
+    <div className='w-full'  >
         <Swiper
-                  spaceBetween={30}
-                  centeredSlides={true}
+                  spaceBetween={15}
+                  centeredSlides={false}
 
                   autoplay={{
                       delay: 2500,
@@ -56,35 +56,37 @@ const ReviewSlider = () => {
                   // navigation={true}
                   modules={[Autoplay, Pagination, Navigation]}
                   breakpoints={{
-                      1024: { slidesPerView: 4 }
+                      1024: { slidesPerView: 4 },
+                      0:{ slidesPerView:1 },
+                      640:{ slidesPerView:2 },
                   }}
                   className="mySwiper"
         >
 
         { loading ? (<div>Loading</div>) : (
             reviews.map((review,index) => (
-                <SwiperSlide className='bg-richblack-800 p-4 rounded-lg flex flex-col gap-3' key={index}>
+                <SwiperSlide className='bg-richblack-800 p-4 rounded-lg flex flex-col gap-3 h-[200px] sm:h-[220px] ' key={index}>
                     <div className='flex gap-3'>
                         <img
                             src={ review?.user?.image ? (review?.user?.image) :
                             (`https://api.dicebear.com/5.x/initials/svg?seed=${review?.user?.firstName} ${review?.user?.lastName}`)}
 
-                            className='w-[40px] h-[40px] object-cover rounded-full '
+                            className='lg:w-[40px] w-[20px] lg:h-[40px] h-[20px] object-cover rounded-full '
                             alt='user image'
 
                         />
                         <div>
-                            <p className='text-richblack-5'>{review?.user?.firstName} {review?.user?.lastName}</p>
-                            <p className='text-sm text-richblack-600' >{review?.user?.email}</p>
+                            <p className='text-richblack-5 sm:text-[10px]'>{review?.user?.firstName} {review?.user?.lastName}</p>
+                            <p className='text-sm text-richblack-600 sm:text-[10px]' >{review?.user?.email}</p>
                         </div>
 
 
                     </div>
-                   <div className='text-richblack-25 text-sm'  >
+                   <div className=' text-richblack-25 text-sm'  >
                     {review?.review.split(" ").length > TRUNCATE_LENGTH ? ( review?.review.split(" ").slice(0,TRUNCATE_LENGTH).join(" ") + "..." ) : review?.review }
                    </div>
 
-                   <div className='flex gap-3' >
+                   <div className='flex items-center gap-3' >
                     <p>{review?.rating.toFixed(1)}</p>
                     <RatingStars Review_Count={review?.rating} />
 

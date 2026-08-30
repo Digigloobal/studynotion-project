@@ -65,7 +65,7 @@ const ContactUsForm = () => {
                     }
             </div>
 
-            <div className='flex flex-col gap-1 w-[50%]'>
+            <div className='flex flex-col gap-1 lg:w-[50%] w-[45%]'>
 
             <label htmlFor='lastName' className='text-sm text-richblack-25'>Last Name</label>
              <input
